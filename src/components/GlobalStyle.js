@@ -17,12 +17,12 @@ button{
     font-size: 1.1 rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #23d997;
+    border: 3px solid #0A7AA4;
     background: transparent;
     color: white;
     transition: all 0.5s ease;
     &:hover{
-        background-color: #23d997;
+        background-color: #0A7AA4;
         color: white;
     }
 }
@@ -42,7 +42,7 @@ h4{
 
 span{
     font-weight: bold;
-    color: #23d997;
+    color: #0A7AA4;
 }
 
 a{
