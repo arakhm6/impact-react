@@ -43,6 +43,7 @@ h3{
 
 h4{
     font-weight: bold;
+    font-size: 2rem;
 }
 
 span{
