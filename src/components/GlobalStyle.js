@@ -23,7 +23,9 @@ button{
     color: white;
     transition: all 0.5s ease;
     font-family: 'Open Sans', sans-serif;
-
+    text-transform: uppercase;
+    border-radius: 8px;
+    cursor: pointer;
     &:hover{
         background-color: #0A7AA4;
         color: white;

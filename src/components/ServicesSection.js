@@ -7,6 +7,13 @@ import waves1 from "../img/waves1.jpeg";
 //Styling
 import styled from "styled-components";
 import { About, Description, Image } from "../styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserFriends,
+  faBusinessTime,
+  faWallet,
+  faCogs,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ServicesSection = () => {
   return (
@@ -18,28 +25,28 @@ const ServicesSection = () => {
         <Logos>
           <Logo>
             <div className="icon">
-              <img src={clock} alt="icon" />
+              <FontAwesomeIcon icon={faBusinessTime} size="2x" />
               <h3>Efficient</h3>
               <p>Lorem, ipsum dolor.</p>
             </div>
           </Logo>
           <Logo>
             <div className="icon">
-              <img src={teamwork} alt="icon" />
+              <FontAwesomeIcon icon={faUserFriends} size="2x" />
               <h3>Teamwork</h3>
               <p>Lorem, ipsum dolor.</p>
             </div>
           </Logo>
           <Logo>
             <div className="icon">
-              <img src={diaphragm} alt="icon" />
+              <FontAwesomeIcon icon={faCogs} size="2x" />
               <h3>Diaphragm</h3>
               <p>Lorem, ipsum dolor.</p>
             </div>
           </Logo>
           <Logo>
             <div className="icon">
-              <img src={money} alt="icon" />
+              <FontAwesomeIcon icon={faWallet} size="2x" />
               <h3>Affordable</h3>
               <p>Lorem, ipsum dolor.</p>
             </div>
@@ -74,11 +81,17 @@ const Logo = styled.div`
   .icon {
     display: flex;
     align-items: center;
+    color: #0a7aa4;
     h3 {
-      margin-left: 0.5rem;
-      background: white;
-      color: black;
+      margin-left: 1rem;
       padding: 1rem;
+      text-align: left;
+    }
+    p {
+      font-size: 1rem;
+      margin-left: 1rem;
+      padding: 1rem;
+      text-align: right;
     }
   }
 `;
