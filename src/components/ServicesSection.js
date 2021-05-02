@@ -1,9 +1,5 @@
 import React from "react";
-import clock from "../img/clock.svg";
-import diaphragm from "../img/diaphragm.svg";
-import money from "../img/money.svg";
-import teamwork from "../img/teamwork.svg";
-import waves1 from "../img/waves1.jpeg";
+import home2 from "../img/home2.png";
 //Styling
 import styled from "styled-components";
 import { About, Description, Image } from "../styles";
@@ -54,7 +50,7 @@ const ServicesSection = () => {
         </Logos>
       </Description>
       <Image>
-        <img src={waves1} alt="icon" />
+        <img src={home2} alt="camera" />
       </Image>
     </Services>
   );

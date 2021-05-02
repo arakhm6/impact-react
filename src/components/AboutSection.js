@@ -1,5 +1,5 @@
 import React from "react";
-import waves from "../img/waves.jpeg";
+import home1 from "../img/home1.png";
 //Styling
 import { About, Description, Image, Hide } from "../styles";
 
@@ -27,7 +27,7 @@ const AboutSection = () => {
         <button>Contact Us</button>
       </Description>
       <Image>
-        <img src={waves} alt="waves" />
+        <img src={home1} alt="photographer" />
       </Image>
     </About>
   );
