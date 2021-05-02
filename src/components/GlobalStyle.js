@@ -18,7 +18,7 @@ button{
     font-size: 1.1 rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #0A7AA4;
+    border: 3px solid #91B960;
     background: transparent;
     color: white;
     transition: all 0.5s ease;
@@ -27,7 +27,7 @@ button{
     border-radius: 8px;
     cursor: pointer;
     &:hover{
-        background-color: #0A7AA4;
+        background-color: #91B960;
         color: white;
     }
 }
@@ -48,7 +48,7 @@ h4{
 
 span{
     font-weight: bold;
-    color: #0A7AA4;
+    color: #91B960;
 }
 
 a{

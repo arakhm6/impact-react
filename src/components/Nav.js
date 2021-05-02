@@ -45,6 +45,9 @@ const StyledNav = styled.nav`
     font-size: 1.5rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
+    &:hover {
+      color: #91b960;
+    }
   }
   li {
     padding-left: 10rem;

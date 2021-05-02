@@ -77,7 +77,7 @@ const Logo = styled.div`
   .icon {
     display: flex;
     align-items: center;
-    color: #0a7aa4;
+    color: #91b960;
     h3 {
       margin-left: 1rem;
       padding: 1rem;
