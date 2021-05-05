@@ -1,7 +1,7 @@
 import athlete from "../img/athlete-small.png";
 import athlete2 from "../img/athlete2.png";
 import theracer from "../img/theracer-small.png";
-//import theracer2 from "../img/the-racer2.png";
+import theracer2 from "../img/the-racer2.png";
 
 export const WorkState = () => {
   return [
@@ -25,7 +25,7 @@ export const WorkState = () => {
     {
       title: "The Racer",
       primaryImg: theracer,
-      //secondaryImg: theracer2,
+      secondaryImg: theracer2,
       url: "/work/the-racer",
       awards: [
         {
