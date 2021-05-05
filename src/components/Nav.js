@@ -1,15 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   return (
     <StyledNav>
-      <h1>
+      <motion.h1
+        whileHover={{ scale: 1.2, rotate: 360, transition: { duration: 0.75 } }}
+        whileTap={{
+          scale: 0.8,
+          rotate: -90,
+          borderRadius: "100%",
+        }}
+      >
         <Link to="/" id="logo">
           Impact
         </Link>
-      </h1>
+      </motion.h1>
       <ul>
         <li>
           <Link to="/">About Us</Link>
