@@ -4,6 +4,7 @@ import home1 from "../img/home1.png";
 import { About, Description, Image, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
+import { titleAnim, fade, imgAnim } from "../Animation";
 
 const AboutSection = () => {
   const titleAnimation = {
@@ -17,7 +18,7 @@ const AboutSection = () => {
       transition: {
         duration: 0.75,
         ease: "easeIn",
-        staggerChildren: 1,
+        staggerChildren: 0.3,
         when: "beforeChildren",
       },
     },
@@ -43,15 +44,15 @@ const AboutSection = () => {
             <motion.h2 variants={titleAnimation}>true.</motion.h2>
           </Hide>
         </motion.div>
-        <p>
+        <motion.p variants={fade}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
           consectetur?
-        </p>
-        <button>Contact Us</button>
+        </motion.p>
+        <motion.button variants={fade}>Contact Us</motion.button>
       </Description>
-      <Image>
+      <motion.Image variants={imgAnim}>
         <img src={home1} alt="photographer" />
-      </Image>
+      </motion.Image>
     </About>
   );
 };
