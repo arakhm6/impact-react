@@ -6,18 +6,11 @@ import { motion } from "framer-motion";
 const Nav = () => {
   return (
     <StyledNav>
-      <motion.h1
-        whileHover={{ scale: 1.2, rotate: 360, transition: { duration: 0.75 } }}
-        whileTap={{
-          scale: 0.8,
-          rotate: -90,
-          borderRadius: "100%",
-        }}
-      >
+      <h1>
         <Link to="/" id="logo">
           Impact
         </Link>
-      </motion.h1>
+      </h1>
       <ul>
         <li>
           <Link to="/">About Us</Link>

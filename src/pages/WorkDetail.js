@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { WorkState } from "../pages/workState";
 
+//Animation
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animation";
+
 const WorkDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -18,7 +22,12 @@ const WorkDetail = () => {
   return (
     <>
       {work && (
-        <Details>
+        <Details
+          variants={pageAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
           <Headline>
             <h2>{work.title}</h2>
             <img src={work.primaryImg} alt="Main image" />
@@ -38,7 +47,7 @@ const WorkDetail = () => {
   );
 };
 
-const Details = styled.div`
+const Details = styled(motion.div)`
   color: white;
 `;
 

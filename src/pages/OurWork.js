@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../Animation";
 //Images
 import athlete from "../img/athlete-small.png";
 import racer from "../img/theracer-small.png";
 
 const OurWork = () => {
   return (
-    <Work>
+    <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
       <Movie>
         <h2>The Athlete</h2>
         <div className="line"></div>
@@ -26,7 +28,7 @@ const OurWork = () => {
   );
 };
 
-const Work = styled.div`
+const Work = styled(motion.div)`
   min-height: 100vh;
   overflow: hidden;
   padding: 5rem 10rem;
