@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { fade, imgAnim, pageAnimation, lineAnim } from "../Animation";
+import { fade, imgAnim, pageAnimation, lineAnim, slider } from "../Animation";
 
 //Images
 import athlete from "../img/athlete-small.png";
@@ -11,6 +11,11 @@ import racer from "../img/theracer-small.png";
 const OurWork = () => {
   return (
     <Work variants={pageAnimation} initial="hidden" animate="show" exit="exit">
+      <Frame1 variants={slider}></Frame1>
+      <Frame2 variants={slider}></Frame2>
+      <Frame3 variants={slider}></Frame3>
+      <Frame4 variants={slider}></Frame4>
+      <Frame5 variants={slider}></Frame5>
       <Movie>
         <motion.h2 variants={fade}>The Athlete</motion.h2>
         <motion.div className="line" variants={lineAnim}></motion.div>
@@ -56,6 +61,32 @@ const Movie = styled.div`
 
 const Hide = styled.div`
   overflow: hidden;
+`;
+
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #bdff6d;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #eeeb48;
+`;
+
+const Frame3 = styled(Frame1)`
+  background: #eca84e;
+`;
+
+const Frame4 = styled(Frame1)`
+  background: #f1653a;
+`;
+
+const Frame5 = styled(Frame1)`
+  background: #f13a3a;
 `;
 
 export default OurWork;
