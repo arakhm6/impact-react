@@ -10,10 +10,13 @@ import {
   faWallet,
   faCogs,
 } from "@fortawesome/free-solid-svg-icons";
+import { useScroll } from "./useScroll";
+import { fade } from "../Animation";
 
 const ServicesSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Services>
+    <Services variants={fade} animate={controls} initial="hidden" ref={element}>
       <Description>
         <h2>
           High <span>quality</span> services

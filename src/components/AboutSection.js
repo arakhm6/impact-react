@@ -5,6 +5,7 @@ import { About, Description, Image, Hide } from "../styles";
 //Framer Motion
 import { motion } from "framer-motion";
 import { titleAnim, fade, imgAnim } from "../Animation";
+import { useScroll } from "./useScroll";
 
 const AboutSection = () => {
   const titleAnimation = {
@@ -23,8 +24,11 @@ const AboutSection = () => {
       },
     },
   };
+
+  const [element, controls] = useScroll();
+
   return (
-    <About>
+    <About variants={fade} animate={controls} initial="hidden" ref={element}>
       <Description>
         <motion.div
           variants={container}
