@@ -58,7 +58,7 @@ const Headline = styled.div`
   h2 {
     position: absolute;
     top: 10%;
-    left: 50%;
+    left: 40%;
     transform: translate(-50% -10%);
   }
   img {

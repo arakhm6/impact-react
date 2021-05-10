@@ -1,10 +1,10 @@
 import React from "react";
 import home1 from "../img/home1.png";
-//Styling
+//Styling & Framer motion
 import { About, Description, Image, Hide } from "../styles";
-//Framer Motion
+import styled from "styled-components";
 import { motion } from "framer-motion";
-import { titleAnim, fade, imgAnim } from "../Animation";
+import { slider, fade, imgAnim, pageAnimation } from "../Animation";
 import { useScroll } from "./useScroll";
 
 const AboutSection = () => {
@@ -28,7 +28,18 @@ const AboutSection = () => {
   const [element, controls] = useScroll();
 
   return (
-    <About variants={fade} animate={controls} initial="hidden" ref={element}>
+    <About
+      variants={(fade, pageAnimation)}
+      animate={(controls, "show")}
+      initial="hidden"
+      ref={element}
+      exit="exit"
+    >
+      <Frame1 variants={slider}></Frame1>
+      <Frame2 variants={slider}></Frame2>
+      <Frame3 variants={slider}></Frame3>
+      <Frame4 variants={slider}></Frame4>
+      <Frame5 variants={slider}></Frame5>
       <Description>
         <motion.div
           variants={container}
@@ -60,5 +71,31 @@ const AboutSection = () => {
     </About>
   );
 };
+
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #bdff6d;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #eeeb48;
+`;
+
+const Frame3 = styled(Frame1)`
+  background: #eca84e;
+`;
+
+const Frame4 = styled(Frame1)`
+  background: #f1653a;
+`;
+
+const Frame5 = styled(Frame1)`
+  background: #f13a3a;
+`;
 
 export default AboutSection;
