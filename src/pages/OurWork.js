@@ -21,8 +21,8 @@ const OurWork = () => {
       <Frame5 variants={slider}></Frame5>
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
         <motion.h2 variants={fade}>The Athlete</motion.h2>
-        <motion.div className="line" variants={lineAnim}></motion.div>
         <Link to="/work/the-athlete">
+          <motion.div className="line" variants={lineAnim}></motion.div>
           <Hide>
             <motion.img variants={imgAnim} src={athlete} alt="athlete" />
           </Hide>
@@ -35,8 +35,8 @@ const OurWork = () => {
         initial="hidden"
       >
         <h2>The Racer</h2>
-        <motion.div className="line" variants={lineAnim}></motion.div>
         <Link to="/work/the-racer">
+          <motion.div className="line" variants={lineAnim}></motion.div>
           <img src={racer} alt="racer" />
         </Link>
       </Movie>
@@ -64,6 +64,10 @@ const Movie = styled(motion.div)`
     width: 100%;
     height: 70vh;
     object-fit: cover;
+  }
+  h2 {
+    font-family: "PT Sans", cursive;
+    font-weight: lighter;
   }
 `;
 
