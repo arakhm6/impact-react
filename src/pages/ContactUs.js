@@ -4,6 +4,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation, titleAnim } from "../Animation";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faTelegramPlane,
+} from "@fortawesome/free-brands-svg-icons";
 
 const ContactUs = () => {
   return (
@@ -21,20 +27,30 @@ const ContactUs = () => {
       <div>
         <Hide>
           <Social variants={titleAnim}>
-            <Circle />
-            <h2>Send Us A Message</h2>
+            <FontAwesomeIcon icon={faFacebook} className="fb" size="3x" />
+            <a target="_blank" href="http://facebook.com">
+              <h2 className="fb">Facebook</h2>{" "}
+            </a>
           </Social>
         </Hide>
         <Hide>
           <Social variants={titleAnim}>
-            <Circle />
-            <h2>Send Us A Message</h2>
+            <FontAwesomeIcon icon={faInstagram} className="insta" size="3x" />
+            <a target="_blank" href="http://instagram.com">
+              <h2 className="insta">Instagram</h2>{" "}
+            </a>
           </Social>
         </Hide>
         <Hide>
-          <Social variants={titleAnim}>
-            <Circle />
-            <h2>Send Us A Message</h2>
+          <Social variants={titleAnim} className="telegram">
+            <FontAwesomeIcon
+              icon={faTelegramPlane}
+              className="telegram"
+              size="3x"
+            />
+            <a target="_blank" href="http://telegram.org">
+              <h2 className="telegram">Telegram</h2>{" "}
+            </a>
           </Social>
         </Hide>
       </div>
@@ -62,6 +78,25 @@ const Social = styled(motion.div)`
   align-items: center;
   h2 {
     margin: 2rem;
+    color: #353535;
+  }
+  a {
+    text-decoration: none;
+  }
+  .fb {
+    :hover {
+      color: #1877f2;
+    }
+  }
+  .insta {
+    :hover {
+      color: #b800b2;
+    }
+  }
+  .telegram {
+    :hover {
+      color: #34a9e1;
+    }
   }
 `;
 
