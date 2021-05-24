@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { WorkState } from "../pages/workState";
+import Scroll from "../components/Scroll";
 
 //Animation
 import { motion } from "framer-motion";
@@ -41,6 +42,7 @@ const WorkDetail = () => {
               />
             ))}
           </Awards>
+          <Scroll />
         </Details>
       )}
     </>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { fade, imgAnim, pageAnimation, lineAnim, slider } from "../Animation";
 import { useScroll } from "../components/useScroll";
+import Scroll from "../components/Scroll";
 
 //Images
 import athlete from "../img/athlete-small.png";
@@ -40,6 +41,7 @@ const OurWork = () => {
           <img src={racer} alt="racer" />
         </Link>
       </Movie>
+      <Scroll />
     </Work>
   );
 };

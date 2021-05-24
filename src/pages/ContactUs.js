@@ -1,4 +1,5 @@
 import React from "react";
+import Scroll from "../components/Scroll";
 
 //Animation
 import { motion } from "framer-motion";
@@ -54,6 +55,7 @@ const ContactUs = () => {
           </Social>
         </Hide>
       </div>
+      <Scroll />
     </ContactStyle>
   );
 };
