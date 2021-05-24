@@ -3,7 +3,7 @@ import Scroll from "../components/Scroll";
 
 //Animation
 import { motion } from "framer-motion";
-import { pageAnimation, titleAnim } from "../Animation";
+import { pageAnimation, titleAnim, slider } from "../Animation";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -20,7 +20,17 @@ const ContactUs = () => {
       animate="show"
       exit="exit"
     >
-      <Title>
+      <Title
+        variants={pageAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
+        <Frame1 variants={slider}></Frame1>
+        <Frame2 variants={slider}></Frame2>
+        <Frame3 variants={slider}></Frame3>
+        <Frame4 variants={slider}></Frame4>
+        <Frame5 variants={slider}></Frame5>
         <Hide>
           <motion.h2 variants={titleAnim}>Get in touch</motion.h2>
         </Hide>
@@ -107,6 +117,32 @@ const Circle = styled.div`
   width: 3rem;
   height: 3rem;
   background: #353535;
+`;
+
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #bdff6d;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #eeeb48;
+`;
+
+const Frame3 = styled(Frame1)`
+  background: #eca84e;
+`;
+
+const Frame4 = styled(Frame1)`
+  background: #f1653a;
+`;
+
+const Frame5 = styled(Frame1)`
+  background: #f13a3a;
 `;
 
 export default ContactUs;
