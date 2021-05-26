@@ -1,5 +1,6 @@
 import React from "react";
 import home1 from "../img/home1.png";
+import { Link } from "react-router-dom";
 //Styling & Framer motion
 import { About, Description, Image, Hide } from "../styles";
 import styled from "styled-components";
@@ -63,7 +64,9 @@ const AboutSection = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque,
           consectetur?
         </motion.p>
-        <motion.button variants={fade}>Contact Us</motion.button>
+        <Link to="/contact">
+          <motion.button variants={fade}>Contact Us</motion.button>
+        </Link>
       </Description>
       <motion.Image variants={imgAnim}>
         <img src={home1} alt="photographer" />
