@@ -40,7 +40,7 @@ const ContactUs = () => {
           <Social variants={titleAnim}>
             <FontAwesomeIcon icon={faFacebook} className="fb" size="3x" />
             <a target="_blank" href="http://facebook.com">
-              <h2 className="fb">Facebook</h2>{" "}
+              <h2>Facebook</h2>{" "}
             </a>
           </Social>
         </Hide>
@@ -48,7 +48,7 @@ const ContactUs = () => {
           <Social variants={titleAnim}>
             <FontAwesomeIcon icon={faInstagram} className="insta" size="3x" />
             <a target="_blank" href="http://instagram.com">
-              <h2 className="insta">Instagram</h2>{" "}
+              <h2>Instagram</h2>{" "}
             </a>
           </Social>
         </Hide>
@@ -60,7 +60,7 @@ const ContactUs = () => {
               size="3x"
             />
             <a target="_blank" href="http://telegram.org">
-              <h2 className="telegram">Telegram</h2>{" "}
+              <h2>Telegram</h2>{" "}
             </a>
           </Social>
         </Hide>
@@ -103,19 +103,13 @@ const Social = styled(motion.div)`
     text-decoration: none;
   }
   .fb {
-    :hover {
-      color: #1877f2;
-    }
+    color: #1877f2;
   }
   .insta {
-    :hover {
-      color: #b800b2;
-    }
+    color: #d83071;
   }
   .telegram {
-    :hover {
-      color: #34a9e1;
-    }
+    color: #34a9e1;
   }
 `;
 
