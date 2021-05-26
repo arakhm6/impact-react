@@ -15,7 +15,9 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link to="/">About Us</Link>
+          <Link to="/" className="about">
+            About Us
+          </Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -23,7 +25,9 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/work">Our Work</Link>
+          <Link to="/work" className="work">
+            Our Work
+          </Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -31,7 +35,9 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/contact" className="contact">
+            Contact Us
+          </Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
@@ -66,6 +72,21 @@ const StyledNav = styled.nav`
     font-size: 1.5rem;
     font-family: "Lobster", cursive;
     font-weight: lighter;
+    &:hover {
+      color: #91b960;
+    }
+  }
+  .about {
+    &:hover {
+      color: #91b960;
+    }
+  }
+  .work {
+    &:hover {
+      color: #91b960;
+    }
+  }
+  .contact {
     &:hover {
       color: #91b960;
     }
